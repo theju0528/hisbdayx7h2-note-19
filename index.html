@@ -76,10 +76,11 @@ const interval = setInterval(() => {
  const now = new Date().getTime();
  const diff = targetDate - now;
  if (diff <= 0) {
-   clearInterval(interval);
-   countdownEl.innerHTML = "It's time ❤️";
-   btn.style.display = "inline-block";
-   document.getElementById("title").innerText = "Happy Birthday, My Precious ❤️";
+ clearInterval(interval);
+ countdownEl.style.display = "none";
+ document.getElementById("title").innerText = "Happy Birthday, My Precious ❤️";
+ startMessage(); // THIS is the key line
+}
  } else {
    const h = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
    const m = Math.floor((diff % (1000*60*60))/(1000*60));
