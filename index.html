@@ -69,7 +69,7 @@ button {
 </audio>
 <script>
 // ⏳ SET YOUR TIME (YYYY-MM-DDTHH:MM:SS)
-const targetDate = new Date("2026-03-19T00:00:00").getTime();
+const targetDate = new Date().getTime() - 1000;
 const countdownEl = document.getElementById("countdown");
 const btn = document.getElementById("btn");
 const interval = setInterval(() => {
